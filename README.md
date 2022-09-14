@@ -3,7 +3,7 @@
 https://django-project-iqbal.herokuapp.com/
 
 ### BAGAN
-![Bagan](../static/Framework.jpg?raw=true) 
+![Bagan](../static/Flowchart.jpg?raw=true) 
 <br>
 Aplikasi bekerja diawali dengan request yang diberikan oleh client yang kemudian akan diproses oleh URL dan diteruskan ke Views. Fungsi yang ada pada Views akan dijalankan dan melakukan query ke Models yang diteruskan ke Database. Selanjutnya, Database akan mengembalikan query yang direquest dan meneruskannya ke template untuk dirender. Terakhir, template tersebut diteruskan ke client untuk ditampilkan.
 <br>
