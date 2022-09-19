@@ -1,0 +1,112 @@
+[
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":1,
+        "fields":{
+            "watched": true,
+            "title":"Amour",
+            "rating": 4.1,
+            "release_date": "2012-09-20",
+            "review": "\"What makes Amour not only bearable but cathartic is the beauty of the filmmaking and the delicacy of the performances.\" -Amy Taubin"
+        }
+},
+{
+        "model":"mywatchlist.mywatchlist",
+        "pk":2,
+        "fields":{
+            "watched": true,
+            "title":"Arrival",
+            "rating": 4.1,
+            "release_date": "2017-01-04",
+            "review": "\"Arrival just might be the overall best movie of the decade with the way it cleverly examines what we believe while simultaneously delivering a tense, gripping sci-fi story.\" -Nathan Mattise"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":3,
+        "fields":{
+            "watched": false,
+            "title":"Paper Moon",
+            "rating": 4.2,
+            "release_date": "1973-05-16",
+            "review": "\"It's everything a road picture is supposed to be, a life-changing personal journey, a quest, a bit old-fashioned and a hoot.\" -Roger Moore"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":4,
+        "fields":{
+            "watched": false,
+            "title":"I Am Cuba",
+            "rating": 4.3,
+            "release_date": "1964-09-06",
+            "review": "\"An astonishing portrait of Cuba transcends its propaganda origins and deserves a more prominent place in cinema history.\" -Laurence Boyce"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":5,
+        "fields":{
+            "watched": true,
+            "title":"Still Walking",
+            "rating": 4.2,
+            "release_date": "2008-06-28",
+            "review": "\"A tonally acute and deeply observant tale of familial love whose quiet confidence leaves a profound emotional impact.\" -Mattie Lucas"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":6,
+        "fields":{
+            "watched": true,
+            "title":"Short Term 12",
+            "rating": 4.1,
+            "release_date": "2013-08-23",
+            "review": "\"It's a quietly moving drama, so brilliantly written and performed.\" -Charlotte Harrison"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":7,
+        "fields":{
+            "watched": true,
+            "title":"The Lighthouse",
+            "rating": 4.0,
+            "release_date": "2019-10-18",
+            "review": "\"The images are between beautiful and overwhelming, and the performances, the counterpoints between Dafoe and Pattinson, supreme.\" -Pablo O. Scholz"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":8,
+        "fields":{
+            "watched": true,
+            "title":"The Handmaiden",
+            "rating": 4.4,
+            "release_date": "2016-06-01",
+            "review": "\"Beautiful images in the frame with a grotesc story about the survival in a context war. You have to watch it.\" -Guillem Martinez Oya"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":9,
+        "fields":{
+            "watched": false,
+            "title":"Mishima: A Life in Four Chapters",
+            "rating": 4.3,
+            "release_date": "1985-09-20",
+            "review": "\"Stylistically and visually, the movie is sumptuous, innovative, and rich.\" -Siong-huat Chua"
+        }
+    },
+    {
+        "model":"mywatchlist.mywatchlist",
+        "pk":10,
+        "fields":{
+            "watched": true,
+            "title":"A Separation",
+            "rating": 4.2,
+            "release_date": "2011-03-16",
+            "review": "\"A Separation is a movie that keeps expanding, like one of those paper pellets that, when you drop it in water, blossoms into a flower.\" -John Powers"
+        }
+    }
+]
