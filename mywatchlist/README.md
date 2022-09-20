@@ -26,3 +26,11 @@ Data delivery menjadi hal yang sangat dibutuhkan pada suatu platform yang dinami
 4. Menambahkan 10 data film yang ingin dimasukkan pada database dalam file baru bernama `initial_mywatchlist_data.json` pada folder baru`fixtures` yang terletak di dalam folder `mywatchlist`
 5. Membuat fungsi pada `views.py` yang berfungsi untuk menampilkan watchlist dalam HTML, JSON, dan XML. Selanjutnya melakukan routing pada `urls.py` dengan menambahkan path HTML, JSON, dan XML pada `urlpatterns`.
 6. Melakukan migration dengan menjalankan command `python manage.py makemigrations` dan `python manage.py migrate` serta loaddata dengan command `python manage.py loaddata initial_mywatchlist_data.json`.
+
+### Postman
+**HTML Response**
+![html](/images/Postman_HTML.jpg)
+**JSON Response**
+![html](/images/Postman_JSON.jpg)
+**XML Response**
+![html](/images/Postman_XML.jpg)
