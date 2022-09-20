@@ -28,9 +28,9 @@ Data delivery menjadi hal yang sangat dibutuhkan pada suatu platform yang dinami
 6. Melakukan migration dengan menjalankan command `python manage.py makemigrations` dan `python manage.py migrate` serta loaddata dengan command `python manage.py loaddata initial_mywatchlist_data.json`.
 
 ### Postman
-**HTML Response**
+**HTML Response** <br><br>
 ![html](/images/Postman_HTML.jpg)
-**JSON Response**
+**JSON Response** <br><br>
 ![html](/images/Postman_JSON.jpg)
-**XML Response**
+**XML Response** <br><br>
 ![html](/images/Postman_XML.jpg)
