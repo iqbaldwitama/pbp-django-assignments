@@ -4,19 +4,19 @@ https://django-project-iqbal.herokuapp.com/mywatchlist
 <hr>
 
 ## Perbedaan Antara JSON, XML, dan HTML
-<br>
+
 JSON atau JavaScript Object Notation adalah suatu format file berbentuk teks yang digunakan untuk menyimpan dan melakukan transmisi objek data dalam bentuk key dan value. JSON digunakan untuk menyimpan informasi dalam suatu cara yang mudah diakses dan terorganisir karena pengaksesannya lebih cepat serta efisien dibanding dalam bentuk XML.
 
 XML atau Extensible Markup Language didesain untuk menyimpan data dan sangat populer untuk melakukan transfer data (data delivery). XML diturunkan dari SGML dan memberikan ruang untuk men-define markup elements dan generate customized markup language. XML menggunakan tags dalam formatnya, sehingga pengaksesan lebih lambat dan ukuran data lebih besar dibandingkan dengan JSON.
 
 HTML atau Hypertext Markup Language adalah suatu markup language yang digunakan untuk menampilkan data-data pada web page. Pada HTML, dapat melakukan kustomisasi tampilannya pada web page dengan menambahkan elemen statis dan dinamis agar tampilan menjadi lebih menarik.
-<br>
+
 <hr>
 
 ## Mengapa Data Delivery Penting dalam Pengimplementasian Sebuah Platform?
-<br>
+
 Data delivery menjadi hal yang sangat dibutuhkan pada suatu platform yang dinamis agar seorang client atau user bisa melakukan CRUD process (Create, Read, Update, Delete). Untuk mencapai hal tersebut, dapat menggunakan beberapa data delivery format seperti JSON, XML, dan juga HTML. Dengan data delivery, komunikasi antara user dan platform akan menjadi lebih efisien dan mudah.
-<br>
+
 <hr>
 
 ## Implementasi
