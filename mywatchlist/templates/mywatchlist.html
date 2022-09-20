@@ -1,9 +1,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Welcome to My Watchlist!</h1>
+<style>
+    h1 {
+        text-align: center;
+        font-family: Arial;
+    }
+    h2 {
+        text-align: center;
+        font-family: Arial;
+        font-size: 140%;
+    }
+    th {
+        text-align: center;
+        font-family: Arial; 
+        font-size: 120%;
+    }
+    td {
+        text-align: center;
+        font-family: Arial; 
+        font-weight: normal;
+        height: 50px;
+    }
+    tr:nth-child(even){
+        background-color: #D6EEEE;
+    }
+</style>
 
-<table border="1">
+<h1>Welcome to Your Watchlist</h1>
+
+{% if result == True %}
+<h2> Selamat, kamu sudah banyak menonton!</h2>
+{% else %}
+<h2> Wah, kamu masih sedikit menonton!</h2>
+{% endif %}
+
+&nbsp;
+
+<table>
     <tr>
     <th>Watched</th>
     <th>Title</th>
@@ -14,11 +48,11 @@
     {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
     {% for movie in list_of_movies %}
         <tr>
-            <th>{{movie.watched}}</th>
-            <th>{{movie.title}}</th>
-            <th>{{movie.rating}}</th>
-            <th>{{movie.release_date}}</th>
-            <th>{{movie.review}}</th>
+            <td>{{movie.watched}}</td>
+            <td>{{movie.title}}</td>
+            <td>{{movie.rating}}</td>
+            <td>{{movie.release_date}}</td>
+            <td style="width: 50%;">{{movie.review}}</td>
         </tr>
     {% endfor %}
 
