@@ -20,11 +20,9 @@ Data delivery menjadi hal yang sangat dibutuhkan pada suatu platform yang dinami
 <hr>
 
 ### Implementasi
-<br>
 1. Membuat aplikasi Django baru bernama `mywatchlist` dengan cara menjalankan command `python manage.py startapp mywatchlist` pada direktori.
 2. Menambahkan path `mywatchlist` pada `urlpatterns` di file `urls.py` yang ada pada folder `project-django` agar dapat menghandle pengaksesan path `mywatchlist/` dengan isi `path('mywatchlist/', include('mywatchlist.urls'))`. Setelah itu, saya menambahkan mywatchlist pada `installed_app` yang ada pada `settings.py`.
 3. Membuat class model ‘MyWatchlist’ yang menyimpan variable watched (BooleanField), title (CharField), rating (DecimalField), release_date (DateField), dan review (TextField) pada file `models.py` yang ada pada folder `mywatchlist`.
 4. Menambahkan 10 data film yang ingin dimasukkan pada database dalam file baru bernama `initial_mywatchlist_data.json` pada folder baru`fixtures` yang terletak di dalam folder `mywatchlist`
 5. Membuat fungsi pada `views.py` yang berfungsi untuk menampilkan watchlist dalam HTML, JSON, dan XML. Selanjutnya melakukan routing pada `urls.py` dengan menambahkan path HTML, JSON, dan XML pada `urlpatterns`.
 6. Melakukan migration dengan menjalankan command `python manage.py makemigrations` dan `python manage.py migrate` serta loaddata dengan command `python manage.py loaddata initial_mywatchlist_data.json`.
-<br>
