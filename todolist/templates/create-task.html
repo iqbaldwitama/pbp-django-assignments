@@ -27,6 +27,9 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
         border-radius: 6px;
     }
+    .padding {
+        padding-top: 30px;
+    }
     .button {
         border: none;
         color: white;
@@ -42,8 +45,8 @@
 </style>
 
 <!-- Code taken from register.html with a few alterations -->
-<div>
-    <h1 style="text-align: center;">Create New Task</h1>   
+<div class="padding">
+    <h1 style="text-align: center; font-weight: bold;">Create New Task</h1>   
         <form method="POST">  
             {% csrf_token %}
             <table>  
