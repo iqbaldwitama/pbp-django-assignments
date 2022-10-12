@@ -110,7 +110,7 @@ Contoh dari kode todolist.html:
   
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 
-1. Load bootstrap pada Django Project dengan cara menambahkan beberapa barisan kode pada base.html yang terletak pada folder templates.
+1. Load bootstrap pada Django Project dengan cara menambahkan beberapa barisan kode pada `base.html` yang terletak pada folder templates.
   Pada head:
   ```
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
