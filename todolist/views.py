@@ -87,14 +87,14 @@ def update_task(request, pk):
     task_update = ToDoList.objects.get(user=request.user, pk=pk)
     task_update.status = not (task_update.status)
     task_update.save()
-    return redirect('todolist:show_todolist')
+    return HttpResponseRedirect(reverse('todolist:show_todolist'))
 
 @login_required(login_url='/todolist/login/')
 @csrf_exempt
 def delete_task(request, pk):
     ToDoList.objects.get(user=request.user,pk=pk).delete()
-    return redirect('todolist:show_todolist')
-    
+    return HttpResponseRedirect(reverse('todolist:show_todolist'))
+
 @login_required(login_url='/todolist/login/')
 def show_json(request):
     data = ToDoList.objects.filter(user=request.user)
