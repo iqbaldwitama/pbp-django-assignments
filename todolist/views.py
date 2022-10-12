@@ -1,11 +1,13 @@
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
+from django.shortcuts import render, redirect, get_object_or_404
 from todolist.models import ToDoList
 from django.contrib import messages
-from todolist.forms import ToDoListForm
 from django.http import HttpResponseRedirect
+from django.core import serializers
 from django.urls import reverse
 import datetime
 
@@ -55,24 +57,45 @@ def logout_user(request):
     return response
 
 # Code reference: https://docs.djangoproject.com/en/4.1/topics/forms/
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
 def create_task(request):
-    form = ToDoListForm()
     if request.method == "POST":
-        form = ToDoListForm(request.POST)
-        if form.is_valid():
-            added_task = form.save(commit=False)
-            added_task.user = request.user
-            added_task.save()
-            return HttpResponseRedirect('/todolist/')
-    
-    return render(request, 'create-task.html', {'form': form})
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        user = request.user
 
+        ToDoList.objects.create(user=user, title=title, description=description)        
+        return HttpResponseRedirect('/todolist/')
+    
+    return render(request, 'create-task.html', {})
+
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
+def create_task_ajax(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        user = request.user
+
+        ToDoList.objects.create(user=user, title=title, description=description)
+        return JsonResponse({'error': False})
+
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
 def update_task(request, pk):
     task_update = ToDoList.objects.get(user=request.user, pk=pk)
     task_update.status = not (task_update.status)
     task_update.save()
-    return HttpResponseRedirect(reverse('todolist:show_todolist'))
+    return redirect('todolist:show_todolist')
 
+@login_required(login_url='/todolist/login/')
+@csrf_exempt
 def delete_task(request, pk):
     ToDoList.objects.get(user=request.user,pk=pk).delete()
-    return HttpResponseRedirect(reverse('todolist:show_todolist'))
+    return redirect('todolist:show_todolist')
+    
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    data = ToDoList.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', data), content_type='application/json')
