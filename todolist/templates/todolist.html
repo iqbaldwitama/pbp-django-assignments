@@ -137,29 +137,36 @@
             return false
         }
 
+        
         function taskCards() {
-            $("#cards").empty();
-            $.get("/todolist/json/", function(data) {
-                for (i=0; i<data.length; i++){
-                    let status = data[i].fields.status ? "Done" : "Not Started";
-                    $("#cards").append(`
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card shadow p-3 mb-5 bg-white rounded border-0" style="padding-right: 10px;">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title" style="font-weight: bold; color: #6638A6;">${data[i].fields.title}</h4>
-                                <h5 class="card-text">${status}</h5>
-                                <p class="card-text" style="font-size: 16px;">${data[i].fields.date}</p>
-                                <p class="card-text">${data[i].fields.description}</p>
-                                <div class="mt-auto">
-                                    <a href="update/${data[i].pk}", class="button" style="background-color: #01C89A">Update</a>
-                                    <a href="delete/${data[i].pk}", class="button" style="background-color: #FF642F">Delete</a>
+            let stringHTML = "";
+            $.ajax({
+                url: "json",
+                type: "GET",
+                dataType: "json",
+                success: function(data) {
+                    for (i=0; i<data.length; i++){
+                        let status = data[i].fields.status ? "Done" : "Not Started";
+                        stringHTML += `
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card shadow p-3 mb-5 bg-white rounded border-0" style="padding-right: 10px;">
+                                <div class="card-body d-flex flex-column">
+                                    <h4 class="card-title" style="font-weight: bold; color: #6638A6;">${data[i].fields.title}</h4>
+                                    <h5 class="card-text">${status}</h5>
+                                    <p class="card-text" style="font-size: 16px;">${data[i].fields.date}</p>
+                                    <p class="card-text">${data[i].fields.description}</p>
+                                    <div class="mt-auto">
+                                        <a href="update/${data[i].pk}", class="button" style="background-color: #01C89A">Update</a>
+                                        <a href="delete/${data[i].pk}", class="button" style="background-color: #FF642F">Delete</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>`)
+                        </div>`;
+                        $('#cards').html(stringHTML);
+                    }
                 }
-            })
-        };
+            });
+        }
     </script>
     
     <a href="{% url 'todolist:logout' %}" class="button" style="float: right; background-color: #6200EE">Logout</a>
